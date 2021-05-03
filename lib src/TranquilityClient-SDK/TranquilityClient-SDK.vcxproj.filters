@@ -13,21 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Auth">
+      <UniqueIdentifier>{ed5f222b-7dec-4c2f-a6cd-9336c51d0400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Auth">
+      <UniqueIdentifier>{0bc8e0de-9b97-4bc1-925e-5c2fe41ea3b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ResponceManagement">
+      <UniqueIdentifier>{5367d215-f60f-4f49-aaf1-1bd3f3ad803d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="auth.h">
+      <Filter>Header Files\Auth</Filter>
+    </ClInclude>
+    <ClInclude Include="client.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="structs.h">
+      <Filter>Header Files\ResponceManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="errors.h">
+      <Filter>Header Files\ResponceManagement</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TranquilityClient-SDK.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="auth.cpp">
+      <Filter>Source Files\Auth</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
