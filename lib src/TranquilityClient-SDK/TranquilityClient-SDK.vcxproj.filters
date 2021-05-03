@@ -19,7 +19,7 @@
     <Filter Include="Source Files\Auth">
       <UniqueIdentifier>{0bc8e0de-9b97-4bc1-925e-5c2fe41ea3b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\ResponceManagement">
+    <Filter Include="Header Files\Networking">
       <UniqueIdentifier>{5367d215-f60f-4f49-aaf1-1bd3f3ad803d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -31,10 +31,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="structs.h">
-      <Filter>Header Files\ResponceManagement</Filter>
+      <Filter>Header Files\Networking</Filter>
     </ClInclude>
     <ClInclude Include="errors.h">
-      <Filter>Header Files\ResponceManagement</Filter>
+      <Filter>Header Files\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="networking.hpp">
+      <Filter>Header Files\Networking</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
