@@ -2,6 +2,7 @@
 #include <string>
 #include "errors.h"
 #include "structs.h"
+#include "HTTPRequest.h"
 
 namespace authFunc {
 	loginResponce_t login(std::string username, std::string password);
@@ -14,7 +15,7 @@ struct auth_t {
 
 	auth_t(std::string token_t) {
 		loginResponce_t res = authFunc::login(token_t);
-
+		
 		if (res.failed) {
 			throw loginFailed();
 		}
