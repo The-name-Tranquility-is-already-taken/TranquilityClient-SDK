@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -78,8 +81,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\Win32;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\curl;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -122,8 +125,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>TranquilityClient-SDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\Win32;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>TranquilityClient-SDK.lib;libcurldebug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,9 +145,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="SKD-Test.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
