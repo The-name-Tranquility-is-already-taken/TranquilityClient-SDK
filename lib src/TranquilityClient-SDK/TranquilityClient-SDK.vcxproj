@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>$(ProjectDir)Curl-7.76.0\Win32\;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(ProjectDir)Curl-7.76.0\curl\;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)json\single_include\nlohmann;$(ProjectDir)json\include\nlohmann;$(ProjectDir)Curl-7.76.0\curl\;$(IncludePath)</IncludePath>
     <IntDir>Bin\$(Configuration)\$(PlatformShortName)\obj\</IntDir>
     <OutDir>$(ProjectDir)Bin\$(Configuration)\$(PlatformShortName)\</OutDir>
   </PropertyGroup>
@@ -196,6 +196,7 @@
     <ClInclude Include="errors.h" />
     <ClInclude Include="networking.hpp" />
     <ClInclude Include="structs.h" />
+    <ClInclude Include="structs.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="auth.cpp" />

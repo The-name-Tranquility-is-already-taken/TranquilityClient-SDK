@@ -4,6 +4,9 @@
 #include <iomanip>
 #include <curl.h>
 
+#include <json.hpp>
+using json = nlohmann::json;
+
 std::string encodeForUrlQuery(std::string s)
 {
     static const char* allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~!$&'()*+,;=:@/?";
@@ -30,12 +33,13 @@ size_t WriteCallback(char* contents, size_t size, size_t nmemb, void* userp)
     return size * nmemb;
 }
 
-bool doneInit = false;
-std::string getRequest(std::string URL, std::string data) {
+static bool doneInit = false;
+json getRequest(std::string URL, std::string data) {
     if (!doneInit) {
         curl_global_init(CURL_GLOBAL_ALL);
     }
 
+    json parsed;
     std::string readBuffer;
 
     CURL* curl;
@@ -54,15 +58,14 @@ std::string getRequest(std::string URL, std::string data) {
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
         res = curl_easy_perform(curl);
-        if (res != CURLE_OK) {
-        std::cout << "\nURL: " << URL << std::endl;
-            fprintf(stderr, "error: %s\n", curl_easy_strerror(res));
-        }
-        else {
 
+        parsed = json::parse(readBuffer);
+        if (res != CURLE_OK) {
+            fprintf(stderr, "error: %s\n", curl_easy_strerror(res));
+            assert("getRequest err");
         }
     }
     curl_easy_cleanup(curl);
 
-    return std::to_string(res);
+    return parsed;
 }

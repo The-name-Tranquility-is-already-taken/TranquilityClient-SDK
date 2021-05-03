@@ -4,6 +4,9 @@
 #include <curl.h>
 #include "networking.hpp"
 
+#include <json.hpp>
+using json = nlohmann::json;
+
 std::size_t Callback(
 	const char* in,
 	std::size_t size,
@@ -17,11 +20,15 @@ std::size_t Callback(
 }
 
 loginResponce_t authFunc::login(std::string email, std::string password) {
-	loginResponce_t responcee = loginResponce_t();
+	loginResponce_t res = loginResponce_t();
 
-	std::cout << "Testt 1!\n";
+	json responce = getRequest("http://c.spookiebois.club:322/api/member/login", "email=" + email + "&password=" + password);
+	responce = responce["response"];
+	if (responce != nullptr) {
+		res.failed = false;
+		res.user->id		= responce["id"];
+		res.token			= responce["token"];
 
-	getRequest("http://c.spookiebois.club:322/api/member/login", "email=" + email + "&password=" + password);
-
-	return responcee;
+	}
+	return res;
 };
