@@ -75,17 +75,28 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(ProjectDir)..\TranquilityClient-SDK\Bin\$(Configuration)\$(PlatformShortName)\;$(LibraryPath)</LibraryPath>
+    <IntDir>Bin\$(Configuration)\$(PlatformShortName)\obj\</IntDir>
+    <OutDir>$(ProjectDir)Bin\$(Configuration)\$(PlatformShortName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)Bin\$(Configuration)\$(PlatformShortName)\</OutDir>
+    <IntDir>Bin\$(Configuration)\$(PlatformShortName)\obj\</IntDir>
+    <LibraryPath>$(ProjectDir)..\TranquilityClient-SDK\Bin\$(Configuration)\$(PlatformShortName)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\Win32;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\curl;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\TranquilityClient-SDK\Bin\$(Configuration)\$(PlatformShortName)\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <OutDir>$(ProjectDir)Bin\$(Configuration)\$(PlatformShortName)\</OutDir>
+    <IntDir>Bin\$(Configuration)\$(PlatformShortName)\obj\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)Bin\$(Configuration)\$(PlatformShortName)\</OutDir>
+    <IntDir>Bin\$(Configuration)\$(PlatformShortName)\obj\</IntDir>
+    <LibraryPath>$(ProjectDir)..\TranquilityClient-SDK\Bin\$(Configuration)\$(PlatformShortName)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -97,6 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>TranquilityClient-SDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,6 +125,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>TranquilityClient-SDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,8 +138,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\Curl-7.76.0\Win32;C:\Users\frayb\Documents\GitHub\TranquilityClient-SDK\lib src\TranquilityClient-SDK\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>TranquilityClient-SDK.lib;libcurldebug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>TranquilityClient-SDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -143,6 +156,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>TranquilityClient-SDK.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

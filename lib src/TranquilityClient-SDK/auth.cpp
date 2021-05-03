@@ -1,5 +1,6 @@
 #include <iostream>
 #include "auth.h"
+#define CURL_STATICLIB
 #include <curl.h>
 
 std::size_t Callback(
