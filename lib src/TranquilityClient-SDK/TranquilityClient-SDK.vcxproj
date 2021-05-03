@@ -192,8 +192,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="auth.h" />
+    <ClInclude Include="cache.hpp" />
     <ClInclude Include="client.h" />
     <ClInclude Include="errors.h" />
+    <ClInclude Include="logging.hpp" />
     <ClInclude Include="networking.hpp" />
     <ClInclude Include="structs.h" />
     <ClInclude Include="structs.hpp" />

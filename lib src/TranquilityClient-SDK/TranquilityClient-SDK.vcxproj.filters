@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Networking">
       <UniqueIdentifier>{5367d215-f60f-4f49-aaf1-1bd3f3ad803d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Cache">
+      <UniqueIdentifier>{2e7cad97-c6eb-4910-917c-d10669d556fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logging">
+      <UniqueIdentifier>{951c336f-e7e1-4c76-aa4e-e5caf263c582}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="auth.h">
@@ -41,6 +47,12 @@
     </ClInclude>
     <ClInclude Include="structs.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cache.hpp">
+      <Filter>Header Files\Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.hpp">
+      <Filter>Header Files\Logging</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
