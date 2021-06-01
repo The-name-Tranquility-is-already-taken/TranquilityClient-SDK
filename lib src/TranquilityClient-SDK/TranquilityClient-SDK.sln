@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TranquilityClient-SDK", "TranquilityClient-SDK.vcxproj", "{CD2C1896-C594-4B9D-B764-F2A04634AC40}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SKD-Test", "..\SKD-Test\SKD-Test.vcxproj", "{AE62F460-C5D3-477A-B1E1-B3CE018E6E5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CD2C1896-C594-4B9D-B764-F2A04634AC40} = {CD2C1896-C594-4B9D-B764-F2A04634AC40}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

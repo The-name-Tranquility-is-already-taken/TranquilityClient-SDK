@@ -5,6 +5,9 @@
 #include "networking.hpp"
 
 #include <json.hpp>
+
+#include "./includes.hpp" 
+
 using json = nlohmann::json;
 
 std::size_t Callback(
@@ -22,13 +25,12 @@ std::size_t Callback(
 loginResponce_t authFunc::login(std::string email, std::string password) {
 	loginResponce_t res = loginResponce_t();
 
-	json responce = getRequest("http://c.spookiebois.club:322/api/member/login", "email=" + email + "&password=" + password);
+	json responce = getRequest(WEB_ROOT + "/api/member/login", "email=" + email + "&password=" + password);
 	responce = responce["response"];
 	if (responce != nullptr) {
 		res.failed = false;
 		res.user->id		= responce["id"];
 		res.token			= responce["token"];
-
 	}
 	return res;
 };
