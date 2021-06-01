@@ -29,8 +29,8 @@ loginResponce_t authFunc::login(std::string email, std::string password) {
 	responce = responce["response"];
 	if (responce != nullptr) {
 		res.failed = false;
-		res.user->id		= responce["id"];
-		res.token			= responce["token"];
+		res.user->id = responce["id"];
+		res.token	 = responce["token"];
 	}
 	return res;
 };
