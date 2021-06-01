@@ -9,6 +9,6 @@ struct cache_t {
 	std::vector<guild_t>* guilds;
 
 	cache_t(auth_t* auth) {
-		LOG_ERROR("testtt");
+		
 	}
 };

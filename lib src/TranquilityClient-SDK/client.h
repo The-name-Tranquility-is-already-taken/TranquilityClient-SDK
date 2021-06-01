@@ -11,6 +11,8 @@ struct client_t {
 
 	cache_t* cache = nullptr;
 
+	std::vector<guild_t> guilds = {};
+
 	client_t(std::string username, std::string password) {
 		try {
 			auth = new auth_t(username, password);
