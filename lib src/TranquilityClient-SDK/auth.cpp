@@ -6,7 +6,7 @@
 
 #include <json.hpp>
 
-#include "./includes.hpp" 
+#include "./includes.hpp"
 
 using json = nlohmann::json;
 
@@ -30,7 +30,7 @@ loginResponce_t authFunc::login(std::string email, std::string password) {
 	if (responce != nullptr) {
 		res.failed = false;
 		res.user->id = responce["id"];
-		res.token	 = responce["token"];
+		res.token = responce["token"];
 	}
 	return res;
 };

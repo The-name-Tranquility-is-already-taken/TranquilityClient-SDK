@@ -1,20 +1,8 @@
 #pragma once
 
-#pragma region CONFIG
+#include "config.hpp"
 
-#define HTTP_MODE_t "http"
-#define HOSTNAME_t "spookiebois.club"
-#define PORT_t "322"
-
-#pragma endregion
-
-
-
-
-
-
-
-// Stuff below
+// Config Stuff below plz dont touch.
 
 #ifdef HTTP_MODE_t
 #define HTTP_MODE std::string(HTTP_MODE_t)
@@ -22,7 +10,6 @@
 #ifndef HTTP_MODE
 #define HTTP_MODE std::string("http")
 #endif // !HOSTNAME
-
 
 #ifdef HOSTNAME_t
 #define HOSTNAME std::string(HOSTNAME_t)

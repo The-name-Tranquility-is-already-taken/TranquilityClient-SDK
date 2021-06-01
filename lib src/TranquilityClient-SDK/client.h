@@ -5,11 +5,11 @@
 #include "cache.hpp"
 
 struct client_t {
-	auth_t* auth		= nullptr;
-	bool loggedIn		= false;
-	bool failedLogin	= false;
+	auth_t* auth = nullptr;
+	bool loggedIn = false;
+	bool failedLogin = false;
 
-	cache_t* cache		= nullptr;
+	cache_t* cache = nullptr;
 
 	client_t(std::string username, std::string password) {
 		try {

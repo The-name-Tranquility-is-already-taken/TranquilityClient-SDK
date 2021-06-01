@@ -8,8 +8,7 @@ namespace authFunc {
 	loginResponce_t login(std::string username, std::string password);
 };
 
-
-struct auth_t {	
+struct auth_t {
 	user_t* user = new user_t();
 
 	std::string token = "N/A";

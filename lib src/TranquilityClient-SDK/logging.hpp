@@ -36,7 +36,7 @@ OUTT something newLIN something result;
 endSPike
 
 #define SHN(E) ("[" + E + "]")
-#define DVV + " - " + 
+#define DVV + " - " +
 void logg(string message, string type, string caller) {
 	cout << SHN(caller) DVV SHN(type) DVV ">" + (message);
 	addFunc(2, 2);

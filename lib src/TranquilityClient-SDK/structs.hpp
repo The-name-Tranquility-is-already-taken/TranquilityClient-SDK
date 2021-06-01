@@ -2,7 +2,6 @@
 #include <string>
 #define entry(E) std::string E = "";
 
-
 struct user_t {
 	entry(id);
 	entry(tag);
@@ -13,5 +12,4 @@ struct user_t {
 
 struct guild_t {
 	std::string id = "";
-
 };

@@ -194,6 +194,7 @@
     <ClInclude Include="auth.h" />
     <ClInclude Include="cache.hpp" />
     <ClInclude Include="client.h" />
+    <ClInclude Include="config.hpp" />
     <ClInclude Include="errors.h" />
     <ClInclude Include="includes.hpp" />
     <ClInclude Include="logging.hpp" />
