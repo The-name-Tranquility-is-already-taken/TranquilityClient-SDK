@@ -4,8 +4,6 @@
 #include <curl.h>
 #include "networking.hpp"
 
-#include <json.hpp>
-
 #include "./includes.hpp"
 
 using json = nlohmann::json;
