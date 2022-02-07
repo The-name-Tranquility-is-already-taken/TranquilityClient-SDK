@@ -1,0 +1,5 @@
+/home/conni/Downloads/Stuff/clion-2021.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/conni/Downloads/Stuff/clion-2021.3.2/bin/ninja/linux/ninja -G Ninja /home/conni/CLionProjects/TranquilitySDK
+-- Using the single-header code from /home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/_deps/json-src/single_include/
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/conni/CLionProjects/TranquilitySDK/cmake-build-debug
