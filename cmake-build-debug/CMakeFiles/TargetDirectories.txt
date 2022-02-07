@@ -1,6 +1,0 @@
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/CMakeFiles/TranquilitySDK_Test.dir
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/CMakeFiles/TranquilitySDK.dir
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/_deps/json-build/CMakeFiles/rebuild_cache.dir
-/home/conni/CLionProjects/TranquilitySDK/cmake-build-debug/_deps/json-build/CMakeFiles/edit_cache.dir
